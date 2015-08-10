@@ -10,9 +10,9 @@ html {
 	color: ;
 }
 body {
-  	padding: 10px;
-  	padding-left: 30px;
-  	padding-right: 30px;
+  	padding: 0px;
+  	padding-left: 0px;
+  	padding-right: 0px;
   	background-color: #f3f3f3;
   	border-radius: 10px;
   	border-style: solid;
@@ -28,7 +28,7 @@ hr {
 
 div {
 	color: #282828;
-	margin-left: 20%;
+	margin-left: 0px;
 }
 
 p {
@@ -43,9 +43,25 @@ h3{
 }
 h4 {
 	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
+.top {
+	text-align: center;
+    height: 5%;
+    width: 100%;
+    opacity: 0.5;
+    width: 100%;
+    }
 
+.left {
+    width: 10%;
+    float:left;
+}
+.main {
+  margin-left:178px;
+ }
 
 
 #title {}
