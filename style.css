@@ -1,10 +1,57 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/*<!-- end needs -->*/
+#Contact{
+	text-align: right;
+	color: ;
+}
 body {
-  	padding: 30px;
+  	padding: 10px;
   	padding-left: 30px;
   	padding-right: 30px;
-  	background-color: #f5fdf5;
+  	background-color: #f3f3f3;
   	border-radius: 10px;
   	border-style: solid;
   	border-color: black;
   }
 
+hr {
+	width: 75%;
+	margin: 0px;
+	border-style: double;
+	border-color: #c0c0c0;
+}
+
+div {
+	color: #282828;
+	margin-left: 20%;
+}
+
+p {
+	color: #414141;
+	width: 75%;
+	text-align: left;
+}
+
+h3{
+	margin: 1px;
+	padding: 0px;
+}
+h4 {
+	padding: 0px;
+}
+
+
+
+
+#title {}
+
+#aboutMe{}
+
+#Experience {}
+
+#techStack{}
