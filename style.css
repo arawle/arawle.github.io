@@ -9,11 +9,12 @@ html {
 	text-align: right;
 	padding-right: 5px;
 }
+
 body {
   	padding: 0px;
   	padding-left: 0px;
   	padding-right: 0px;
-  	background-color: #f3f3f3;
+  	background-color: #FCEBCE;
   	border-radius: 10px;
   	border-style: solid;
   	border-color: black;
@@ -58,13 +59,28 @@ h4 {
 .left {
     width: 10%;
     float:left;
-    margin: 2px;
-    padding: 2px;
+    margin: auto;
+    padding: 3px;
+    text-align: center;
 }
 .main {
   margin-left:178px;
  }
 
+#links{
+  background-color: #AAA9A5;
+  border-color: #414E5E;
+  border-width: 3px;
+  color: #414E5E;
+  border-radius: 10px;
+  width: 100%;
+  margin: 3px;
+  border-style: solid;
+  padding: 5px;
+  text-align: center;
+  vertical-align: center;
+
+}
 
 #title {}
 
