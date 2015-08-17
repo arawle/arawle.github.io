@@ -16,63 +16,71 @@ var shuffleCards = function (array) {
 }
 var shuffledCards = shuffleCards(cardPairsOne);
 
+function setMatched (element) {
+  element.style.backgroundColor = 'inherit';
+  element.style.borderWidth = '2px';
+  element.style.borderColor = 'transparent';
+  element.style.color = 'transparent';
+}
+
+function handleMatch (firstId, eventId, card){
+  var firstElement = document.getElementById(firstId);
+  var secondElement = document.getElementById(eventId);
+  card.innerHTML = card.className;
+  firstClass = null;
+  firstId = null;
+  pairCounter += 1;
+  if (pairCounter === 8){
+    alert('You win!!!')
+  }
+  else {
+    alert(pairCounter)
+  };
+
+  setMatched(firstElement);
+  setMatched(secondElement);
+}
+
+function handleNoMatch (firstId, eventId, card){
+  card.innerHTML = card.className;
+  console.log('Try Again!');
+  var firstElement = document.getElementById(firstId);
+  var secondElement = document.getElementById(eventId);
+     
+  window.setTimeout(function(){
+    firstElement.innerHTML = '';
+    secondElement.innerHTML = '';
+  }, 500);
+  console.log(firstId.innerHTML)
+  firstClass = null;
+  firstId = null;
+}
+
+function cardClickHandler () {
+  var eventId = this.getAttribute('id');
+  if(firstClass === null){
+    this.innerHTML = this.className;
+    firstId = eventId
+    return firstClass = this.className;
+  }
+  else if (firstClass === this.className && firstId !== eventId) {
+    handleMatch (firstId, eventId, this);
+
+  } else {
+    handleNoMatch (firstId, eventId, this);
+  } 
+}
+
 function cardCreator (cardId) {
 	var newCard = document.createElement('div');
-
-		newCard.setAttribute('class', shuffledCards[cardId]);
-    newCard.setAttribute('id', cardId);
-
-		newCard.addEventListener('click', function () {
-      var eventId = this.getAttribute('id');
-      if(firstClass === null){
-        newCard.innerHTML = newCard.className;
-        firstId = eventId
-        return firstClass = this.className;
-      }
-      else if (firstClass === newCard.className && firstId !== eventId) {
-        var firstElement = document.getElementById(firstId);
-        var secondElement = document.getElementById(eventId);
-        newCard.innerHTML = newCard.className;
-        firstClass = null;
-        firstId = null;
-        pairCounter += 1;
-          if (pairCounter === 8){
-            alert('You win!!!')
-          }
-          else {
-            alert(pairCounter)
-          };
-        firstElement.style.backgroundColor = 'inherit';
-        firstElement.style.borderWidth = '2px';
-        firstElement.style.borderColor = 'transparent';
-        firstElement.style.color = 'transparent';
-        secondElement.style.backgroundColor = 'inherit';
-        secondElement.style.borderWidth = '2px';
-        secondElement.style.borderColor = 'transparent';
-        secondElement.style.color = 'transparent';
-
-      } else {
-        newCard.innerHTML = newCard.className;
-        console.log('Try Again!');
-        var firstElement = document.getElementById(firstId);
-        var secondElement = document.getElementById(eventId);
-          
-          window.setTimeout(function(){
-            firstElement.innerHTML = '';
-            secondElement.innerHTML = '';
-          }, 500);
-          console.log(firstId.innerHTML)
-
-          firstClass = null;
-          firstId = null;
-        }
-			
-		})
+	newCard.setAttribute('class', shuffledCards[cardId]);
+  newCard.setAttribute('id', cardId);
+	newCard.addEventListener('click', cardClickHandler)
 	section.appendChild(newCard);
 }
-	for(var j = 0; j < cardPairsOne.length; j++){
-		cardCreator(j);
-	}
+for(var j = 0; j < cardPairsOne.length; j++){
+	cardCreator(j);
+}
 
 //add reset button event handler
 var button = document.querySelector('button');
@@ -80,9 +88,10 @@ button.addEventListener('click', function(){
   location.reload('div');
 })
 
- window.setTimeout(function(){ 
-   alert('Try Again!')
-   location.reload(window)}, 300000);
+window.setTimeout(function(){ 
+ alert('Try Again!')
+ location.reload(window)
+}, 300000);
 
 
 
