@@ -58,6 +58,8 @@ h4 {
 .left {
     width: 10%;
     float:left;
+    margin: 2px;
+    padding: 2px;
 }
 .main {
   margin-left:178px;
