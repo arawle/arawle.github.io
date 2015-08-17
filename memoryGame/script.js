@@ -15,7 +15,7 @@ var shuffleCards = function (array) {
 }
 var shuffledCards = shuffleCards(cardPairsOne);
 
-// Contains the three options for card matching
+// tells cardClickHandler what to do if there is a match between cards
 function handleMatch (firstId, eventId, card){
   var firstElement = document.getElementById(firstId);
   var secondElement = document.getElementById(eventId);
@@ -34,7 +34,7 @@ function handleMatch (firstId, eventId, card){
   setMatched(secondElement);
 }
 
-// tells handleMatch what to do if there is a match between cards
+// tells handleMatch what css to change if there is a match between cards
 function setMatched (element) {
   element.style.backgroundColor = 'inherit';
   element.style.borderWidth = '2px';
@@ -42,7 +42,7 @@ function setMatched (element) {
   element.style.color = 'transparent';
 }
 
-// tells handleMatch what to do if there isn't a match between cards
+// tells cardClickHandler what to do if there isn't a match between cards
 function handleNoMatch (firstId, eventId, card){
   card.innerHTML = card.className;
   console.log('Try Again!');
@@ -58,6 +58,7 @@ function handleNoMatch (firstId, eventId, card){
   firstId = null;
 }
 
+// Adds a handler for card matching (nothing yet selected, match, no match)
 function cardClickHandler () {
   var eventId = this.getAttribute('id');
   if(firstClass === null){
