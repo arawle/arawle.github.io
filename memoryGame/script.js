@@ -3,7 +3,6 @@ var firstClass = null;
 var firstId = null;
 var pairCounter = 0;
 
-
 var cardPairsOne = ['dog', 'cat', 'cow', 'chicken', 'horse', 'rabbit', 'bird', 'ostrich', 'dog', 'cat', 'cow', 'chicken', 'horse', 'rabbit', 'bird', 'ostrich'];
 var shuffleCards = function (array) {
   for (var i = 0; i < array.length * 100; i++){
@@ -16,13 +15,7 @@ var shuffleCards = function (array) {
 }
 var shuffledCards = shuffleCards(cardPairsOne);
 
-function setMatched (element) {
-  element.style.backgroundColor = 'inherit';
-  element.style.borderWidth = '2px';
-  element.style.borderColor = 'transparent';
-  element.style.color = 'transparent';
-}
-
+// Contains the three options for card matching
 function handleMatch (firstId, eventId, card){
   var firstElement = document.getElementById(firstId);
   var secondElement = document.getElementById(eventId);
@@ -41,12 +34,21 @@ function handleMatch (firstId, eventId, card){
   setMatched(secondElement);
 }
 
+// tells handleMatch what to do if there is a match between cards
+function setMatched (element) {
+  element.style.backgroundColor = 'inherit';
+  element.style.borderWidth = '2px';
+  element.style.borderColor = 'transparent';
+  element.style.color = 'transparent';
+}
+
+// tells handleMatch what to do if there isn't a match between cards
 function handleNoMatch (firstId, eventId, card){
   card.innerHTML = card.className;
   console.log('Try Again!');
   var firstElement = document.getElementById(firstId);
   var secondElement = document.getElementById(eventId);
-     
+
   window.setTimeout(function(){
     firstElement.innerHTML = '';
     secondElement.innerHTML = '';
@@ -71,6 +73,7 @@ function cardClickHandler () {
   } 
 }
 
+// Create new cards
 function cardCreator (cardId) {
 	var newCard = document.createElement('div');
 	newCard.setAttribute('class', shuffledCards[cardId]);
@@ -82,16 +85,17 @@ for(var j = 0; j < cardPairsOne.length; j++){
 	cardCreator(j);
 }
 
-//add reset button event handler
+// add New Game button event handler
 var button = document.querySelector('button');
 button.addEventListener('click', function(){
   location.reload('div');
 })
 
+// Starts new game if player isn't successful in 3 min
 window.setTimeout(function(){ 
  alert('Try Again!')
  location.reload(window)
-}, 300000);
+}, 180000);
 
 
 
