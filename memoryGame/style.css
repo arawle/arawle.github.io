@@ -1,0 +1,54 @@
+
+body {
+  background-color: rgb(202,217,164);
+}
+
+h2 {
+	color: rgb(70,131,54);
+	font-size: 50px;
+	padding: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+  margin-bottom: 4px;
+  margin-top: 0px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+section {
+	border: 1px solid rgb(83,56,27);
+  border-radius: 10px;
+	height: 750px;
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(woodbackground.jpg);
+	text-align: center;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+div {
+	margin: 15px;
+  text-align: center;
+	vertical-align: center;
+	border-style: solid;
+	border-color: rgb(55,133,117);
+	border-width: 2px;
+	background-color: rgb(55,110,133);
+	height: 152px;
+	width: 152px;
+	float: left;
+	color: rgb(102,183,81);
+	font-size: 20px;
+  border-radius: 10px;
+  font-family: "Lucida Console", Courier, monospace;
+  
+}
+
+button {
+  color: rgb(133,55,71);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
