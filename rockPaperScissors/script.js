@@ -4,7 +4,7 @@
 	// var scissors = div.dataset.scissors;
 //div options - Rock, Paper, or Scissors
 var divOptions = ['rock', 'paper', 'scissors'];
-var body = document.querySelector('body');
+var options = document.querySelector('section.fit');
 //create user choice and computer choice variable, start set to zero
 var userChoice = null;
 var compChoice = null;
@@ -14,13 +14,14 @@ var winCounter = 0;
 function optionCreator (optionId){
 	var newOption = document.createElement('div');
 	newOption.setAttribute('data', divOptions[optionId])
+	newOption.setAttribute('class', divOptions[optionId])
 	newOption.innerHTML = divOptions[optionId];
 	newOption.addEventListener('click', function (e) {
 			console.log(userPicker(e.target));
 			console.log(computerPicker());
 			comparePicks(userChoice, compChoice);
 		});
-	body.appendChild(newOption);
+	options.appendChild(newOption);
 }
 for(var j = 0; j < divOptions.length; j++){
 	optionCreator(j);
@@ -53,34 +54,34 @@ function computerPicker () {
 // if rock = rock, paper = paper, or scissors = scissors, = tie
 function comparePicks (userChoice, compChoice) {
 	if (userChoice == compChoice) {
-		console.log('The result is a tie');
+		choiceDisplay('The result is a tie');
 	} else if (userChoice == 'rock') {
 		if (compChoice == 'paper') {
-			console.log('paper wins');
+			choiceDisplay('paper wins');
 			lossCounter += 1;
 			winLoss();
 		} else {
-			console.log('rock wins');
+			choiceDisplay('rock wins');
 			winCounter += 1;
 			winLoss();
 		}
 	} else if (userChoice == 'paper') {
 		if (compChoice == 'scissors') {
-			console.log('scissors win')
+			choiceDisplay('scissors win')
 			lossCounter += 1;
 			winLoss();
 		} else {
-			console.log('paper wins');
+			choiceDisplay('paper wins');
 			winCounter += 1;
 			winLoss();
 		}
 	} else {
 		if (compChoice == 'rock') {
-			console.log('rock wins');
+			choiceDisplay('rock wins');
 			lossCounter += 1;
 			winLoss();
 		} else {
-			console.log('scissors win');
+			choiceDisplay('scissors win');
 			winCounter += 1;
 			winLoss();
 		}
@@ -89,21 +90,31 @@ function comparePicks (userChoice, compChoice) {
 
 // create win/loss counter
 var counter = document.createElement('div');
-var section = document.querySelector('section');
-counter.innerHTML = 'wins - ' + winCounter + ' ' + 'losses - ' + lossCounter;
+var section = document.querySelector('section.counter');
+counter.innerHTML = 'wins - ' + winCounter + '\n' + 'losses - ' + lossCounter;
 section.appendChild(counter);
 
 //function for appending win/loss counter
 function winLoss () {
-	counter.innerHTML = 'wins - ' + winCounter + ' ' + 'losses - ' + lossCounter;
+	counter.innerHTML = 'wins - ' + winCounter + '\n' + 'losses - ' + lossCounter;
 	section.appendChild(counter);
 }
 
+//choice display function (section.choice)
+var choice = document.querySelector('section.choiceDisplay')
+function choiceDisplay (winner) {
+	choice.innerHTML = 'you chose ' + userChoice + ' // computer chose ' + compChoice + ' // ' + winner;
+	section.appendChild(choice);
+}
 
-// create reset button for wins/losses
+
+// create reset button for wins/losses and choice display
 var button = document.querySelector('button');
 button.addEventListener('click', function(){
   counter.innerHTML = 'wins - ' + 0 + ' ' + 'losses - ' + 0;
-	section.appendChild(counter);;
+	section.appendChild(counter);
+	choice.innerHTML = 'Click rock, paper, or scissors to begin';
+	section.appendChild(choice);
+
 })
 
