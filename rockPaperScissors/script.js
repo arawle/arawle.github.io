@@ -1,26 +1,30 @@
-var divOptions = ['rock', 'paper', 'scissors'];
 var options = document.querySelector('section.fit');
+var theRock = document.querySelector('div.rock');
+var thePaper = document.querySelector('div.paper');
+var theScissors = document.querySelector('div.scissors');
 //create user choice and computer choice variable, start set to zero
 var userChoice = null;
 var compChoice = null;
 var lossCounter = 0;
 var winCounter = 0;
-// Create divs
-function optionCreator (optionId){
-	var newOption = document.createElement('div');
-	newOption.setAttribute('data', divOptions[optionId])
-	newOption.setAttribute('class', divOptions[optionId])
-	newOption.innerHTML = divOptions[optionId];
-	newOption.addEventListener('click', function (e) {
-		console.log(userPicker(e.target));
-		console.log(computerPicker());
-		comparePicks(userChoice, compChoice);
-	});
-	options.appendChild(newOption);
-}
-for(var j = 0; j < divOptions.length; j++){
-	optionCreator(j);
-}
+
+//create event listeners to rock, paper, and scissors
+theRock.addEventListener('click', function (e) {
+	console.log(userPicker(e.target));
+	console.log(computerPicker());
+	comparePicks(userChoice, compChoice);
+});
+thePaper.addEventListener('click', function (e) {
+	console.log(userPicker(e.target));
+	console.log(computerPicker());
+	comparePicks(userChoice, compChoice);
+});
+theScissors.addEventListener('click', function (e) {
+	console.log(userPicker(e.target));
+	console.log(computerPicker());
+	comparePicks(userChoice, compChoice);
+});
+
 
 // create user choice event handler function
 function userPicker (div) {
