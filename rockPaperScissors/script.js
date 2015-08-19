@@ -1,8 +1,3 @@
-//variables I might need later
-	// var rock = div.dataset.rock;
-	// var paper = div.dataset.paper;
-	// var scissors = div.dataset.scissors;
-//div options - Rock, Paper, or Scissors
 var divOptions = ['rock', 'paper', 'scissors'];
 var options = document.querySelector('section.fit');
 //create user choice and computer choice variable, start set to zero
