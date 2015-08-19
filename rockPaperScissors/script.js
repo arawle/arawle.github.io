@@ -104,7 +104,6 @@ function winLoss () {
 var choice = document.querySelector('section.choiceDisplay')
 function choiceDisplay (winner) {
 	choice.innerHTML = 'you chose ' + userChoice + ' // computer chose ' + compChoice + ' // ' + winner;
-	choice.appendChild(choice);
 }
 
 
@@ -114,7 +113,6 @@ button.addEventListener('click', function(){
   counter.innerHTML = 'wins - ' + 0 + ' ' + 'losses - ' + 0;
 	section.appendChild(counter);
 	choice.innerHTML = 'Click rock, paper, or scissors to begin';
-	choice.appendChild(choice);
 
 })
 
