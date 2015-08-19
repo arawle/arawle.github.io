@@ -17,10 +17,10 @@ function optionCreator (optionId){
 	newOption.setAttribute('class', divOptions[optionId])
 	newOption.innerHTML = divOptions[optionId];
 	newOption.addEventListener('click', function (e) {
-			console.log(userPicker(e.target));
-			console.log(computerPicker());
-			comparePicks(userChoice, compChoice);
-		});
+		console.log(userPicker(e.target));
+		console.log(computerPicker());
+		comparePicks(userChoice, compChoice);
+	});
 	options.appendChild(newOption);
 }
 for(var j = 0; j < divOptions.length; j++){
