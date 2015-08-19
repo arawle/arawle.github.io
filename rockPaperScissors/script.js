@@ -104,7 +104,7 @@ function winLoss () {
 var choice = document.querySelector('section.choiceDisplay')
 function choiceDisplay (winner) {
 	choice.innerHTML = 'you chose ' + userChoice + ' // computer chose ' + compChoice + ' // ' + winner;
-	section.appendChild(choice);
+	choice.appendChild(choice);
 }
 
 
