@@ -35,7 +35,7 @@ function equals (lcdVal) {
 		} else {
 			newLcd = newLcd + lcdVal[i];
 		}
-		// return output
+	  // return output
 	} return (newLcd);
 }
 
