@@ -13,20 +13,19 @@ function statsIt (lcd, statsDo) {
 	}
 }
 
-var statsVar = {
-	mean: function (toArr) {
-		return math.det(math.eval(toArr));
-	},
-	median: function (lcd) {
-		return math.eval(lcd);
-	},
-	mode: function (toArr) {
-		return math.crossProduct(math.eval(toArr));
-	},
-	std: function (toArr) {
-		return math.trace(math.eval(toArr));
-	}
-}
-
-// make the statsVar.whatever work
+//This object doesn't currently work
+// var statsVar = {
+// 	mean: function (toArr) {
+// 		return math.det(math.eval(toArr));
+// 	},
+// 	median: function (lcd) {
+// 		return math.eval(lcd);
+// 	},
+// 	mode: function (toArr) {
+// 		return math.crossProduct(math.eval(toArr));
+// 	},
+// 	std: function (toArr) {
+// 		return math.trace(math.eval(toArr));
+// 	}
+// }
 

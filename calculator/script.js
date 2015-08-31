@@ -4,8 +4,9 @@ $(function() {
 		var calcDo = '';
 		$('#calcDo').on('click', 'span', function (){
 			calcDo = this.id
+      //how do I move lines 8+9 to buttonStyles.js?
 			$(this).css('backgroundColor', '#A6B1B9');
-			$(this).css('borderRadius', '3px')
+			$(this).css('borderRadius', '3px');
 			chooseCalcType(calcDo);
 		})
 
@@ -41,7 +42,7 @@ $(function() {
 			} else if ($(this).attr('id') === '=') {
 				funcOrNot(lcd);
 			} else if ($(this).attr('id') === 'deleteIt'){
-				$('#screen').text(lcd.substring(0, lcd.length - 1))
+				$('#screen').text(lcd.substring(0, lcd.length - 1));
 			} else {
 				//displays pushed buttons on screen
 				$('#screen').text( lcd + keyVal );

@@ -49,6 +49,7 @@ function useFunction (lcdVal) {
 	draw(funcDraw);
 } 
 
+// Plot f(x)=
 function draw (funcDraw) {
   try { 
   	functionPlot({

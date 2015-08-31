@@ -15,17 +15,18 @@ function probIt (lcd, probDo) {
 	}
 }
 
-var probVar = {
-	combos: function (toArr) {
-		return math.det(math.eval(toArr));
-	},
-	kld: function (lcd) {
-		return math.eval(lcd);
-	},
-	funMN: function (toArr) {
-		return math.crossProduct(math.eval(toArr));
-	},
-	perm: function (toArr) {
-		return math.trace(math.eval(toArr));
-	}
-}
+//This object doesn't currently work
+// var probVar = {
+// 	combos: function (toArr) {
+// 		return math.det(math.eval(toArr));
+// 	},
+// 	kld: function (lcd) {
+// 		return math.eval(lcd);
+// 	},
+// 	funMN: function (toArr) {
+// 		return math.crossProduct(math.eval(toArr));
+// 	},
+// 	perm: function (toArr) {
+// 		return math.trace(math.eval(toArr));
+// 	}
+// }

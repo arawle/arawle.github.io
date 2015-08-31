@@ -33,3 +33,8 @@
       $('#matrix').css('backgroundColor', 'transparent');
       $('#stats').css('backgroundColor', 'transparent'); 
     }
+
+    // function showPickedFunction () {
+    //   $(this.id).css('backgroundColor', '#A6B1B9');
+    //   $(this.id).css('borderRadius', '3px');
+    // }

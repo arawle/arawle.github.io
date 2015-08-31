@@ -3,7 +3,7 @@ function matrixIt (lcd, matrixDo) {
 
 	//determine which method to use
 	if (matrixDo === 'determ') {
-		$('#screen').text(math.det(math.eval(toArr)));
+		$('#screen').text(matrixVar[determinant(toArr)]);
 	} else if (matrixDo === 'dotProd') {
 		$('#screen').text(math.eval(lcd));
 	} else if (matrixDo === 'crossProd') {
@@ -15,19 +15,20 @@ function matrixIt (lcd, matrixDo) {
 	}
 }
 
-var matrixVar = {
-	determinant: function (toArr) {
-		return math.det(math.eval(toArr));
-	},
-	dotProduct: function (lcd) {
-		return math.eval(lcd);
-	},
-	crossProduct: function (toArr) {
-		return math.crossProduct(math.eval(toArr));
-	},
-	trace: function (toArr) {
-		return math.trace(math.eval(toArr));
-	}
-}
 
-// make the matrixVar.whatever work
+//This object doesn't currently work
+// var matrixVar = {
+// 		determinant: function (toArr) {
+// 			return math.det(math.eval(toArr));
+// 		},
+// 		dotProduct: function (lcd) {
+// 			return math.eval(lcd);
+// 		},
+// 		crossProduct: function (toArr) {
+// 			return math.crossProduct(math.eval(toArr));
+// 		},
+// 		trace: function (toArr) {
+// 			return math.trace(math.eval(toArr));
+// 		}
+// }
+
