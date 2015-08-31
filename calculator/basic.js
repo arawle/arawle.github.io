@@ -7,7 +7,7 @@ function funcOrNot (func) {
 	//if the string begins with f then evaluate it as function plotter, else use in calc.
 	if (func[0] === fx) {
 			useFunction(func);
-			$('#screen').text(  '\u0192' + equals(func.substring(1)));
+			$('#screen').text('\u0192' + equals(func.substring(1)));
 	} else {
 		var newOutput = equals(func);
 		$('#screen').text(math.eval(newOutput));
