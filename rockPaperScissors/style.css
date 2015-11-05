@@ -4,7 +4,6 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
 body {
 	padding: 0px;
 	padding-left: 0px;
@@ -14,7 +13,6 @@ body {
 	border-style: solid;
 	border-color: black;
 }
-
 div.rock, div.paper, div.scissors {
 	margin: 15px;
   text-align: left;
@@ -31,11 +29,9 @@ div.rock, div.paper, div.scissors {
 	font-size: 20px;
   border-radius: 10px;
 }
-
 .button {
 	margin: 5px;
 }
-
 .counter {
 	margin: auto;
   text-align: center;
@@ -50,7 +46,6 @@ div.rock, div.paper, div.scissors {
 	font-size: 20px;
   border-radius: 10px;
 }
-
 .choiceDisplay {
 	margin: auto;
   text-align: center;
@@ -65,7 +60,6 @@ div.rock, div.paper, div.scissors {
 	font-size: 20px;
   border-radius: 10px;
 }
-
 .fit {
 	border: 3px solid #3A4248;
   border-radius: 10px;
@@ -78,7 +72,6 @@ div.rock, div.paper, div.scissors {
   margin-top: 0px;
   background-color: #43495D;
 }
-
 .top {
 	text-align: center;
   height: 5%;
@@ -86,13 +79,11 @@ div.rock, div.paper, div.scissors {
   opacity: 0.75;
   width: 100%;
  }
-
 h1 {
 	position: absolute;
 	margin: 5px;
 	color: black;
 }
-
 div.rock {
 	background-image: url(rock.gif);
 }
