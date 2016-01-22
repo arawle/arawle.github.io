@@ -15,7 +15,6 @@ var shuffleCards = function (array) {
 }
 var shuffledCards = shuffleCards(cardPairsOne);
 
-// tells cardClickHandler what to do if there is a match between cards
 function handleMatch (firstId, eventId, card){
   var firstElement = document.getElementById(firstId);
   var secondElement = document.getElementById(eventId);
@@ -34,7 +33,6 @@ function handleMatch (firstId, eventId, card){
   setMatched(secondElement);
 }
 
-// tells handleMatch what css to change if there is a match between cards
 function setMatched (element) {
   element.style.backgroundColor = 'inherit';
   element.style.borderWidth = '2px';
@@ -42,7 +40,6 @@ function setMatched (element) {
   element.style.color = 'transparent';
 }
 
-// tells cardClickHandler what to do if there isn't a match between cards
 function handleNoMatch (firstId, eventId, card){
   card.innerHTML = card.className;
   console.log('Try Again!');
@@ -58,7 +55,6 @@ function handleNoMatch (firstId, eventId, card){
   firstId = null;
 }
 
-// Adds a handler for card matching (nothing yet selected, match, no match)
 function cardClickHandler () {
   var eventId = this.getAttribute('id');
   if(firstClass === null){
@@ -71,10 +67,9 @@ function cardClickHandler () {
 
   } else {
     handleNoMatch (firstId, eventId, this);
-  } 
+  }
 }
 
-// Create new cards
 function cardCreator (cardId) {
 	var newCard = document.createElement('div');
 	newCard.setAttribute('class', shuffledCards[cardId]);
@@ -86,14 +81,12 @@ for(var j = 0; j < cardPairsOne.length; j++){
 	cardCreator(j);
 }
 
-// add New Game button event handler
 var button = document.querySelector('button');
 button.addEventListener('click', function(){
   location.reload('div');
 })
 
-// Starts new game if player isn't successful in 3 min
-window.setTimeout(function(){ 
+window.setTimeout(function(){
  alert('Try Again!')
  location.reload(window)
 }, 180000);
