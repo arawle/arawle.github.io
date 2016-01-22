@@ -1,9 +1,20 @@
 # arawle.github.io
 
+###Pixel Art
+
+####The Details
+- Create your own Pixel Art Maker, which lets you click on a grid to "paint" pixel art. <br/>
+- Bonus: Add a color picker which allows the user to select any color.
+
+#### Technologies Used
+- Javascript
+- JQuery
+- jsColor
+
 
 ###Memory Game
 
-####The Requirements
+####The Details
 - The game must consist of at least 16 cards <br/>
 - A user can click two cards each turn. If they are a match, the cards stay overturned. Otherwise, both cards flip back over. <br/>
 - A score display that shows how many matches a user has made <br/>
