@@ -19,24 +19,24 @@ function canvas (color){
 	newDiv.addEventListener('click', function() {
 		newDiv.style.backgroundColor = currentColor;
 		newDiv.style.borderColor = currentColor;
-	})
+	});
 	newDiv.addEventListener('dblclick', function() {
 		newDiv.style.backgroundColor = 'white';
 		newDiv.style.borderColor = '#c8c8c8';
-	})
+	});
 	var list = document.querySelectorAll('div')[0];
 	list.appendChild(newDiv);
 }
 
 for(var i = 0; i < 1598; i++){
-		canvas('white');
+	canvas('white');
 }
 
-var button = document.createElement('button')
+var button = document.createElement('button');
 button.innerHTML = 'click to reset';
 button.addEventListener('click', function(){
 	location.reload('div');
-})
+});
 document.querySelector('body').appendChild(button);
 
 var checkerButton = document.createElement('button');
@@ -47,7 +47,6 @@ checkerButton.addEventListener('click', function(){
 	for (var i = 0; i < test.length; i++) {
 	  test[i].style.backgroundColor === 'white' ? color = '#c8c8c8' : color = 'white';
 	  test[i].style.backgroundColor = color;
-
 	}
 });
 
@@ -66,7 +65,6 @@ test.addEventListener('click', function(){
 		console.log(currentColor);
 	});
 });
-
 
 
 
