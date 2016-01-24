@@ -2,11 +2,10 @@ function probIt (lcd, probDo) {
 	var toArr = lcd.split(' ');
 
 	if (probDo === 'combos') {
-		console.log('hi')
 		$('#screen').text(math.combinations(math.eval(toArr)));
 	} else if (probDo === 'kld') {
-		var halfOne = toArr[0]
-		var halfTwo = toArr[1]
+		var halfOne = toArr[0];
+		var halfTwo = toArr[1];
 		$('#screen').text((math.kldivergence(math.eval(halfOne), math.eval(halfTwo)))._data);
 	} else if (probDo === 'funMN') {
 		$('#screen').text(math.mode(math.eval(lcd)));
