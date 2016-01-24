@@ -1,49 +1,109 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:700|Orbitron);
 html {
   box-sizing: border-box;
 }
-
-@import url(http://fonts.googleapis.com/css?family=Oswald:700|Orbitron);
-
 body {
+  background-color: #FCEBCE;
+  border-color: black;
+  border-radius: 10px;
+  border-style: solid;
 	padding: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
-	background-color: #FCEBCE;
-	border-radius: 10px;
-	border-style: solid;
-	border-color: black;
 }
-
 h1 {
-	position: absolute;
-	margin: 5px;
 	color: black;
 	float: left;
+  margin: 5px;
+  position: absolute;
 }
-
-#head{
-	float: left;
-	height: 5%;
-  width: 100%;
-  opacity: 0.75;
+.plotScreen {
+  background: #958675;
+  border: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4em;
+  font-weight: 600;
+  height: 295px;
+  overflow: auto;
+  padding: 0px;
+  width: 295px;
+  z-index: 1;
 }
-
+.l-row {
+  position: absolute;
+  top: 832px;
+}
+.buttons {
+  overflow: hidden;
+}
+.buttons span {
+  background: #798D9E;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 0px #5E626D, 0px 5px 0px 0px #45637F;
+  cursor: pointer;
+  float: left;
+  font-family: 'Oswald', sans-serif;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 7px 11px 0;
+  text-align: center;
+  width: 70px;
+}
+.buttons span:active {
+  box-shadow: inset 0px 1px 0px #5E626D, 0px 2px 0px 0px #45637F;
+  top: 3px;
+}
+.calcOptions {
+  text-align: center;
+}
+.operator {
+  font-size: 1.3em;
+}
+#basic {
+  background-color: #A6B1B9;
+}
+#button-container {
+  padding: 10px 0 0 18px;
+}
+#calc {
+  background: #B99D71;
+  height: 89px;
+}
+#calcDo {
+  padding-top: 5px;
+  vertical-align: middle;
+}
 #calculator {
   background: #3A4248;
   border-radius: 20px;
-  padding: 15px 15px 15px 15px;
-  width: 335px;
   margin-left: auto;
   margin-right: auto;
-
+  padding: 15px 15px 15px 15px;
+  width: 335px;
 }
-
-#screen-container {
-  background: #5E626D;
-  border-radius: 10px;
-  padding: 20px 20px 5px 20px;
+#cancel {
+  background: #B99D71;
+  width: 147px;
 }
-
+#deleteIt {
+  background: #B99D71;
+}
+#head{
+  float: left;
+  height: 5%;
+  opacity: 0.75;
+  width: 100%;
+}
+#matrixButtons {
+  font-size: 7pt;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  visibility: hidden;
+  width: 317px;
+  z-index: 1;
+}
 #screen {
   background: #958675;
   border: none;
@@ -55,92 +115,11 @@ h1 {
   width: 265px;
   z-index: 1;
 }
-
-.plotScreen {
-  background: #958675;
-  border: none;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.4em;
-  font-weight: 600;
-  height: 295px;
-  padding: 0px;
-  width: 295px;
-  z-index: 1;
-  overflow: auto;
+#screen-container {
+  background: #5E626D;
+  border-radius: 10px;
+  padding: 20px 20px 5px 20px;
 }
-
-#zero { 
+#zero {
   width: 225px;
-}
-#calc {
-	background: #B99D71;
-  height: 89px;
-}
-.l-row {
-  position: absolute;
-  top: 832px;
-}
-
-#cancel {
-  background: #B99D71;
-  width: 147px;
-}
-
-#deleteIt {
-	background: #B99D71;
-}
-
-#button-container {
-  padding: 10px 0 0 18px;
-}
-
-.buttons {
-  overflow: hidden;
-}
-
-.buttons span {
-  background: #798D9E;
-  border-radius: 3px;
-  border: none;
-  box-shadow: inset 0px 1px 0px #5E626D, 0px 5px 0px 0px #45637F;
-  cursor: pointer;
-  float: left;
-  font-family: 'Oswald', sans-serif;
-  width: 70px;
-  height: 40px;
-  margin: 0 7px 11px 0;
-  line-height: 40px;
-  text-align: center;
-}
-
-.buttons span:active {
-  top: 3px;
-  box-shadow: inset 0px 1px 0px #5E626D, 0px 2px 0px 0px #45637F;
-}
-
-.operator {
-  font-size: 1.3em;
-}
-
-.calcOptions {
-	text-align: center;
-}
-
-#matrixButtons {
-	visibility: hidden;
-	font-size: 7pt;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	width: 317px;
-	z-index: 1;
-}
-
-#calcDo {
-	padding-top: 5px;
-	vertical-align: middle;
-}
-
-#basic {
-	background-color: #A6B1B9;
 }
