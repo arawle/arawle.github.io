@@ -9,7 +9,6 @@ function statsIt (lcd, statsDo) {
 		$('#screen').text(statsVar['std'](lcd));
 	}
 }
-
 var statsVar = {
 	mean: function (lcd) {
 		return math.mean(math.eval(lcd));

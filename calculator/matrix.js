@@ -1,6 +1,6 @@
 function matrixIt (lcd, matrixDo) {
 	var toArr = lcd.split(' ');
-	//determine which method to use
+
 	if (matrixDo === 'determ') {
 		//console.log(matrixVar['determinant'])
 		//console.log(matrixVar.determinant)
@@ -13,7 +13,6 @@ function matrixIt (lcd, matrixDo) {
 		$('#screen').text(matrixVar['trace'](toArr));
 	}
 }
-
 
 //This object doesn't currently work
 var matrixVar = {
