@@ -5,30 +5,27 @@ function matrixStyle () {
   $('#basic').css('backgroundColor', 'transparent');
   $('#stats').css('backgroundColor', 'transparent');
   $('#prob').css('backgroundColor', 'transparent');
-};
+}
 function statsStyle () {
   $('#matrixButtons').css('visibility', 'visible');
   $('#matBut').html('');
-  $('#matBut').append('<span class="operator" id="mean">Mean</span><span class="operator" id="median">Median</span><span class="operator" id="mode">Mode</span><span class="operator" id="std">StD</span>')
+  $('#matBut').append('<span class="operator" id="mean">Mean</span><span class="operator" id="median">Median</span><span class="operator" id="mode">Mode</span><span class="operator" id="std">StD</span>');
   $('#basic').css('backgroundColor', 'transparent');
   $('#matrix').css('backgroundColor', 'transparent');
   $('#prob').css('backgroundColor', 'transparent');
-};
+}
 function probStyle () {
   $('#matrixButtons').css('visibility', 'visible');
   $('#matBut').html('');
-  $('#matBut').append('<span class="operator" id="combos">Combos(n,k)</span><span class="operator" id="kld">KLD</span><span class="operator" id="funMN">Multinomial</span><span class="operator" id="perm">Permutations</span>')
+  $('#matBut').append('<span class="operator" id="combos">Combos(n,k)</span><span class="operator" id="kld">KLD</span><span class="operator" id="funMN">Multinomial</span><span class="operator" id="perm">Permutations</span>');
   $('#basic').css('backgroundColor', 'transparent');
   $('#matrix').css('backgroundColor', 'transparent');
   $('#stats').css('backgroundColor', 'transparent');
-};
+}
 function basicStyle () {
   $('#matrixButtons').css('visibility', 'visible');
   $('#matBut').html('');
   $('#prob').css('backgroundColor', 'transparent');
   $('#matrix').css('backgroundColor', 'transparent');
   $('#stats').css('backgroundColor', 'transparent');
-};
-
-
-
+}
