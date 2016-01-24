@@ -1,12 +1,10 @@
-
 body {
   background-color: rgb(202,217,164);
 }
-
 h2 {
-	color: rgb(70,131,54);
+  color: rgb(70,131,54);
   font-family: "Lucida Console", Courier, monospace;
-	font-size: 50px;
+  font-size: 50px;
   margin-bottom: 4px;
   margin-left: auto;
   margin-right: auto;
@@ -14,20 +12,18 @@ h2 {
   padding: 0px;
   text-align: center;
 }
-
 section {
   background-image: url(woodbackground.jpg);
-	border: 1px solid rgb(83,56,27);
+  border: 1px solid rgb(83,56,27);
   border-radius: 10px;
-	height: 750px;
+  height: 750px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
   padding: 0px;
-	text-align: center;
+  text-align: center;
   width: 750px;
 }
-
 div {
   background-color: rgb(55,110,133);
   border-color: rgb(55,133,117);
@@ -44,13 +40,9 @@ div {
   vertical-align: center;
   width: 152px;
 }
-
 button {
   color: rgb(133,55,71);
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-
-
-

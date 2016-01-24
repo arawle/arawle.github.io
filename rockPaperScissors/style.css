@@ -19,13 +19,13 @@ html {
     box-sizing: border-box;
 }
 div.rock {
-	background-image: url(rock.gif);
+  background-image: url(rock.gif);
 }
 div.paper {
-	background-image: url(paper.jpg);
+  background-image: url(paper.jpg);
 }
 div.scissors {
-	background-image: url(scissors.gif);
+  background-image: url(scissors.gif);
 }
 div.rock, div.paper, div.scissors {
   background-color: #9CA5B6;

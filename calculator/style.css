@@ -7,13 +7,13 @@ body {
   border-color: black;
   border-radius: 10px;
   border-style: solid;
-	padding: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
+  padding: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 h1 {
-	color: black;
-	float: left;
+  color: black;
+  float: left;
   margin: 5px;
   position: absolute;
 }
