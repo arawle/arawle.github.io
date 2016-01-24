@@ -1,7 +1,7 @@
 $(function() {
 	var calcDo = '';
 	$('#calcDo').on('click', 'span', function (){
-		calcDo = this.id
+		calcDo = this.id;
 		$(this).css('backgroundColor', '#A6B1B9');
 		$(this).css('borderRadius', '3px');
 		chooseCalcType(calcDo);
@@ -16,9 +16,9 @@ $(function() {
 		} else {
 			basicStyle();
 		}
-	};
+	}
 	$('.buttons').on('click', 'span', function(){
-		var thisDo = $(this).attr('id')
+		var thisDo = $(this).attr('id');
 		var lcd = $('#screen').html();
 		var keyVal = $(this).html();
 
