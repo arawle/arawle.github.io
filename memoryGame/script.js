@@ -12,7 +12,7 @@ var shuffleCards = function (array) {
     array.unshift(insert);
   }
   return array;
-}
+};
 var shuffledCards = shuffleCards(cardPairsOne);
 
 function handleMatch (firstId, eventId, card){
@@ -23,11 +23,11 @@ function handleMatch (firstId, eventId, card){
   firstId = null;
   pairCounter += 1;
   if (pairCounter === 8){
-    alert('You win!!!')
+    alert('You win!!!');
   }
   else {
-    alert(pairCounter)
-  };
+    alert(pairCounter);
+  }
 
   setMatched(firstElement);
   setMatched(secondElement);
@@ -42,7 +42,6 @@ function setMatched (element) {
 
 function handleNoMatch (firstId, eventId, card){
   card.innerHTML = card.className;
-  console.log('Try Again!');
   var firstElement = document.getElementById(firstId);
   var secondElement = document.getElementById(eventId);
 
@@ -50,7 +49,6 @@ function handleNoMatch (firstId, eventId, card){
     firstElement.innerHTML = '';
     secondElement.innerHTML = '';
   }, 500);
-  console.log(firstId.innerHTML)
   firstClass = null;
   firstId = null;
 }
@@ -59,7 +57,7 @@ function cardClickHandler () {
   var eventId = this.getAttribute('id');
   if(firstClass === null){
     this.innerHTML = this.className;
-    firstId = eventId
+    firstId = eventId;
     return firstClass = this.className;
   }
   else if (firstClass === this.className && firstId !== eventId) {
@@ -71,25 +69,24 @@ function cardClickHandler () {
 }
 
 function cardCreator (cardId) {
-	var newCard = document.createElement('div');
-	newCard.setAttribute('class', shuffledCards[cardId]);
+  var newCard = document.createElement('div');
+  newCard.setAttribute('class', shuffledCards[cardId]);
   newCard.setAttribute('id', cardId);
-	newCard.addEventListener('click', cardClickHandler)
-	section.appendChild(newCard);
+  newCard.addEventListener('click', cardClickHandler);
+  section.appendChild(newCard);
 }
 for(var j = 0; j < cardPairsOne.length; j++){
-	cardCreator(j);
+  cardCreator(j);
 }
 
 var button = document.querySelector('button');
 button.addEventListener('click', function(){
   location.reload('div');
-})
+});
 
 window.setTimeout(function(){
- alert('Try Again!')
- location.reload(window)
+ alert('Try Again!');
+ location.reload(window);
 }, 180000);
-
 
 
