@@ -54,11 +54,10 @@ list.appendChild(checkerButton);
 function setCurrentColor (newColor) {
 	currentColor = newColor;
 }
-var test = document.querySelector('.color');
-test.addEventListener('click', function(){
+var colorSelect = document.querySelector('.color');
+colorSelect.addEventListener('click', function(){
 	var x = this;
 	document.querySelector('body').addEventListener('click', function(){
 		setCurrentColor(x.style.backgroundColor);
-		console.log(currentColor);
 	});
 });
