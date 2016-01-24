@@ -18,6 +18,7 @@ function canvas (color){
 	newDiv.style.borderStyle = 'solid';
 	newDiv.style.borderColor = '#c8c8c8';
 	newDiv.style.borderWidth = "1px";
+
 	newDiv.addEventListener('click', function() {
 		newDiv.style.backgroundColor = currentColor;
 		newDiv.style.borderColor = currentColor;
