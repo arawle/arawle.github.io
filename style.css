@@ -39,7 +39,7 @@ p {
   background-color: #DDDDDD;
   padding: 0px 10px 10px 10px;
   float: left;
-  height: 1000px;
+  height: 1150px;
 }
 .left > p {
   margin-bottom: 0px;
@@ -54,7 +54,7 @@ p {
 }
 .page {
   width: 1000px;
-  height: 1010px;
+  height: 1160px;
   margin: auto;
   border: 1px solid black;
 }
